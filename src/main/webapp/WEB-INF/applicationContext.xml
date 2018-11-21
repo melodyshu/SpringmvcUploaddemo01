@@ -10,6 +10,10 @@
 
  <mvc:annotation-driven/>
 
+    <mvc:interceptors>
+        <bean id="myInterceptor" class="com.fx.MyInterceptor"></bean>
+    </mvc:interceptors>
+
     <context:component-scan base-package="com.fx"/>
 
     <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
