@@ -11,6 +11,14 @@
         选择文件：<input type="file" name="multiFile">
         <input type="submit" value="提交">
     </form>
+    <a href="/demo/init2.do">testModelAndView1</a><br/>
+    <c:out value="${name}"></c:out><br/>
+    <a href="/demo/init3.do">testModelMap</a><br/>
+    <c:out value="${name2}"></c:out><br/>
+    <a href="/demo/init4.do">testModel</a><br/>
+    <c:out value="${name3}"></c:out><br/>
+    <a href="/demo/init5.do">testMap</a><br/>
+    <c:out value="${name4}"></c:out><br/>
 </div>
 </body>
 </html>
