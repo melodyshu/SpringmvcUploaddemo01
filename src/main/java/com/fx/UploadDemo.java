@@ -10,12 +10,18 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class UploadDemo {
 
+<<<<<<< HEAD
     @ModelAttribute("userx")
     public User populateModel() {
         User user=new User();
         user.setName("tom");
         user.setAge(39);
         return user;
+=======
+    @ModelAttribute
+    public void populateModel(@RequestParam String name, Model model) {
+        model.addAttribute("attributeName", name);
+>>>>>>> abcb7b5ceaed80d17bcd1c891957748a2c575fbb
     }
 
     @RequestMapping("/demo/init.do")
