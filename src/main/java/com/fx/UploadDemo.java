@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -49,5 +51,20 @@ public class UploadDemo {
     public String testUpload(@RequestParam("multiFile") MultipartFile multipartFile){
         System.out.println(multipartFile.getOriginalFilename());
         return "index";
+    }
+
+    @RequestMapping("/demo/layui.do")
+    public String testlayui(ModelMap modelMap){
+        City city1=new City(1,"北京");
+        City city2=new City(2,"上海");
+        City city3=new City(3,"深圳");
+        City city4=new City(4,"武汉");
+        List<City> cityList=new ArrayList<City>();
+        cityList.add(city1);
+        cityList.add(city2);
+        cityList.add(city3);
+        cityList.add(city4);
+        modelMap.put("city",cityList);
+        return "main";
     }
 }
